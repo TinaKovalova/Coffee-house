@@ -1,0 +1,33 @@
+.header {
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    // .header__container
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        padding-block: toRem(30);
+    }
+
+    // .header__navigation
+
+    &__navigation {
+        $nav-text-color: #ffffff;
+
+        & .navigation__list {
+            color: $nav-text-color;
+        }
+        & .navigation__link {
+            &::after {
+                background-color: $nav-text-color;
+            }
+        }
+        & .logo__icon {
+            filter: invert(98%) sepia(0%) saturate(5078%) hue-rotate(174deg) brightness(100%) contrast(81%);
+        }
+    }
+}
