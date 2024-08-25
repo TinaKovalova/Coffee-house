@@ -1,9 +1,11 @@
 .header {
     color: #ffffff;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
+    &--absolute {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
     &--coffe-page-bg {
         background: url("../img/page-top.png") center / cover no-repeat;
     }
@@ -18,6 +20,10 @@
         flex-wrap: wrap;
         padding-block: toRem(30);
         row-gap: toRem(30);
+        @media (max-width: $tablet) {
+            padding-block: toRem(10);
+            row-gap: toRem(25);
+        }
     }
 
     // .header__navigation
@@ -45,6 +51,9 @@
         display: flex;
         align-items: flex-end;
         justify-content: center;
+        @media (max-width: $tablet) {
+            padding-block: toRem(5);
+        }
     }
 
     // .header__page-intro-title

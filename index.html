@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <base target="_self" href="http://127.0.0.1:5500/"> -->
+    <base target="_self" href="https://tinakovalova.github.io/Coffee-house/">
     <link rel="stylesheet" href="css/style.css">
     <title>Coffee house</title>
 </head>
 
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header class="header header--absolute">
             <div class="header__container">
                 <nav class="header__navigation navigation">
                     <ul class="navigation__list">
@@ -34,9 +36,11 @@
             <section class="intro">
                 <div class="intro__container">
                     <div class="intro__content">
-                        <h1 class="intro__title page-title">Everything You Love About Coffee</h1>
-                        <div class="intro__decor decor decor--white">
-                            <div class="decor__icon"></div>
+                        <div class="title-block">
+                            <h1 class="title-block__title page-title">Everything You Love About Coffee</h1>
+                            <div class="title-block__decor decor decor--white">
+                                <div class="decor__icon"></div>
+                            </div>
                         </div>
                         <p class="intro__text">
                             We makes every day full of energy and taste
@@ -118,11 +122,7 @@
                         </article>
                     </div>
                 </div>
-
             </section>
-
-
-
         </main>
         <footer class="footer" id="footer">
             <div class="footer__container">
@@ -135,10 +135,10 @@
                             </a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">Our coffee</a>
+                            <a href="/coffee-page.html" class="navigation__link">Our coffee</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link">For your pleasure</a>
+                            <a href="/pleasure-page.html" class="navigation__link">For your pleasure</a>
                         </li>
                     </ul>
                 </nav>

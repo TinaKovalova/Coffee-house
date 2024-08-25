@@ -23,7 +23,7 @@
 
     // .intro__title
 
-    &__title {
+    .title-block__title {
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         text-transform: capitalize;
     }
@@ -34,6 +34,7 @@
         text-align: center;
         font-size: toRem(24);
         font-weight: 700;
+
         &--accent {
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
@@ -91,6 +92,8 @@
 
     &__text {
         text-align: center;
+        line-height: 1.5;
+        word-spacing: 0.2rem;
         & > *:not(:last-child) {
             margin-bottom: toRem(30);
         }
@@ -129,3 +132,84 @@
 }
 
 /* Coffee -page */
+.beans-info {
+    // .beans-info__container
+
+    &__container {
+        padding-block: toRem(70) toRem(59);
+    }
+    //beans-info__wrapper
+    &__wrapper {
+        margin: 0 auto;
+        width: toPercent(800, $maxWidthContainer);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: toRem(30) toVW(70, $maxWidth);
+        @media (max-width: $laptop) {
+            width: 100%;
+        }
+        @media (max-width: $tablet) {
+            column-gap: toRem(15);
+        }
+    }
+
+    // .beans-info__image-block
+    &__image-block {
+        flex: 0 1 toRem(272);
+        min-width: 250px;
+        background-color: #c4c4c4;
+        @media (max-width: $mobile) {
+            flex-basis: toRem(320);
+        }
+        @media (max-width: toRem(713)) {
+            aspect-ratio: 320 / 200;
+        }
+        @media (max-width: $smallMobile) {
+            flex-grow: 1;
+        }
+    }
+
+    // .beans-info__image
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 272 / 355;
+        object-fit: cover;
+        // @media (max-width: $smallMobile) {
+        //     aspect-ratio: 320 / 200;
+        // }
+    }
+
+    // .beans-info__content
+
+    &__content {
+        @include adaptiveValue("flex-basis", 406, 300);
+        padding: toRem(9) toRem(30);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (max-width: $tablet) {
+            // flex-basis: toRem(300);
+        }
+
+        @media (max-width: $mobile) {
+            flex-grow: 1;
+            padding-inline: toRem(15);
+        }
+        @media (max-width: $smallMobile) {
+            width: 100%;
+            padding-inline: 0;
+        }
+        p {
+            text-align: center;
+            line-height: 1.5;
+            word-spacing: 0.2rem;
+        }
+        p:first-of-type {
+            padding-block: toRem(25);
+        }
+    }
+}
