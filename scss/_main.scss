@@ -1,5 +1,6 @@
 .intro {
-    min-height: toRem(640);
+    // min-height: toRem(640);
+    min-height: 100svh;
     padding-block: toRem(100);
     display: flex;
     align-items: center;
@@ -117,12 +118,14 @@
 
     &__collection {
         max-width: toPercent(802, $maxWidthContainer);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: toRem(71);
+        & > article {
+            flex-basis: toRem(220);
+        }
     }
 }
 
-.collection-best {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: toRem(71);
-}
+/* Coffee -page */

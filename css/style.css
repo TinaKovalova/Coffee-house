@@ -107,8 +107,8 @@ body {
 }
 
 [class$=__container] {
-  max-width: 72.75rem;
-  padding-inline: 0.625rem;
+  max-width: 73.375rem;
+  padding-inline: 0.9375rem;
   margin: 0 auto;
 }
 
@@ -174,6 +174,7 @@ body {
 .page-title {
   font-size: 2.5rem;
   font-weight: 700;
+  line-height: 1.15;
   color: #ffffff;
   text-align: center;
 }
@@ -216,7 +217,6 @@ body {
 }
 
 .best-product {
-  width: 13.75rem;
   min-height: 15rem;
   padding: 1.375rem 1.34375rem;
   border-radius: 0.5rem;
@@ -246,13 +246,11 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.best-product__title-link {
+.best-product__title {
+  position: relative;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-}
-.best-product__title {
-  position: relative;
 }
 .best-product__title::after {
   content: "";
@@ -284,6 +282,12 @@ body {
   left: 0;
   width: 100%;
 }
+.header--coffe-page-bg {
+  background: url("../img/page-top.png") center/cover no-repeat;
+}
+.header--pleasure-page-bg {
+  background: url("../img/pleasure-top.png") center/cover no-repeat;
+}
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -291,6 +295,7 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-block: 1.875rem;
+  row-gap: 1.875rem;
 }
 .header__navigation .navigation__list {
   color: #ffffff;
@@ -302,9 +307,21 @@ body {
   -webkit-filter: invert(98%) sepia(0%) saturate(5078%) hue-rotate(174deg) brightness(100%) contrast(81%);
           filter: invert(98%) sepia(0%) saturate(5078%) hue-rotate(174deg) brightness(100%) contrast(81%);
 }
-
+.header__page-intro {
+  width: 100%;
+  padding-block: 2.1875rem 3.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .intro {
-  min-height: 40rem;
+  min-height: 100svh;
   padding-block: 6.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -415,9 +432,6 @@ body {
 }
 .bestsellers__collection {
   max-width: 70.1048951049%;
-}
-
-.collection-best {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -428,7 +442,12 @@ body {
           justify-content: center;
   gap: 4.4375rem;
 }
+.bestsellers__collection > article {
+  -ms-flex-preferred-size: 13.75rem;
+      flex-basis: 13.75rem;
+}
 
+/* Coffee -page */
 .footer__container {
   display: -webkit-box;
   display: -ms-flexbox;

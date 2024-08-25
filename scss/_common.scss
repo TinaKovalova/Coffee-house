@@ -39,6 +39,7 @@
 .page-title {
     font-size: toRem(40);
     font-weight: 700;
+    line-height: 1.15;
     color: #ffffff;
     text-align: center;
 }
@@ -77,7 +78,6 @@
 }
 
 .best-product {
-    width: toRem(220);
     min-height: toRem(240);
     padding: toRem(22) toRem(21.5);
     border-radius: toRem(8);
@@ -105,13 +105,13 @@
     }
 
     &__title-link {
-        flex-grow: 1;
     }
 
     // .best-product__title
 
     &__title {
         @include underline-hover;
+        flex-grow: 1;
     }
 
     // .best-product__price
@@ -121,3 +121,4 @@
         align-self: flex-end;
     }
 }
+

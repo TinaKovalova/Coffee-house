@@ -4,6 +4,12 @@
     top: 0;
     left: 0;
     width: 100%;
+    &--coffe-page-bg {
+        background: url("../img/page-top.png") center / cover no-repeat;
+    }
+    &--pleasure-page-bg {
+        background: url("../img/pleasure-top.png") center / cover no-repeat;
+    }
 
     // .header__container
 
@@ -11,6 +17,7 @@
         display: flex;
         flex-wrap: wrap;
         padding-block: toRem(30);
+        row-gap: toRem(30);
     }
 
     // .header__navigation
@@ -29,5 +36,19 @@
         & .logo__icon {
             filter: invert(98%) sepia(0%) saturate(5078%) hue-rotate(174deg) brightness(100%) contrast(81%);
         }
+    }
+    // .header__page-intro
+
+    &__page-intro {
+        width: 100%;
+        padding-block: toRem(35) toRem(54);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    // .header__page-intro-title
+
+    &__page-intro-title {
     }
 }
