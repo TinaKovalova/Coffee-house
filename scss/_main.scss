@@ -338,6 +338,12 @@
         .product-card {
             filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
             background-color: #ffffff;
+            transition: filter 0.3s;
+            @media (any-hover) {
+                &:hover {
+                    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.8));
+                }
+            }
         }
     }
 }
