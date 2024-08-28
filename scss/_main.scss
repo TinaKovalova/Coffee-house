@@ -286,6 +286,12 @@
         & .filter-form__country-lable {
             background: #fff;
             box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25);
+            transition: box-shadow 0.5s;
+            @media (any-hover) {
+                &:hover {
+                    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.45);
+                }
+            }
         }
 
         &:first-child .filter-form__country-lable {
@@ -338,10 +344,10 @@
         .product-card {
             filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
             background-color: #ffffff;
-            transition: filter 0.3s;
+            transition: filter 0.5s;
             @media (any-hover) {
                 &:hover {
-                    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.8));
+                    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.45));
                 }
             }
         }

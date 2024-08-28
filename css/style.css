@@ -725,6 +725,16 @@ body {
   background: #fff;
   -webkit-box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+}
+@media (any-hover) {
+  .filter-form__countries-item .filter-form__country-lable:hover {
+    -webkit-box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.45);
+            box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.45);
+  }
 }
 .filter-form__countries-item:first-child .filter-form__country-lable {
   border-radius: 4px 0px 0px 4px;
@@ -763,15 +773,15 @@ body {
   -webkit-filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
   background-color: #ffffff;
-  -webkit-transition: -webkit-filter 0.3s;
-  transition: -webkit-filter 0.3s;
-  transition: filter 0.3s;
-  transition: filter 0.3s, -webkit-filter 0.3s;
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s;
 }
 @media (any-hover) {
   .products__catalog .product-card:hover {
-    -webkit-filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.8));
-            filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.8));
+    -webkit-filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.45));
+            filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.45));
   }
 }
 
