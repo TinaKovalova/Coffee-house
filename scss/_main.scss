@@ -235,7 +235,7 @@
 .filter-form {
     display: flex;
     flex-wrap: wrap;
-    gap: toRem(20) toRem(83);
+    gap: toRem(35) toRem(83);
     justify-content: center;
     align-items: center;
 
@@ -315,5 +315,29 @@
         left: 0;
         width: 0;
         height: 0;
+    }
+}
+
+//Products section
+
+.products {
+    // .products__container
+
+    &__container {
+        padding-block: toRem(10) toRem(30);
+    }
+
+    // .products__catalog
+
+    &__catalog {
+        max-width: toPercent(800, $maxWidthContainer);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: toRem(60) toRem(70);
+        .product-card {
+            filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
+            background-color: #ffffff;
+        }
     }
 }
