@@ -219,7 +219,7 @@
         height: 1px;
         background-color: #000000;
         position: absolute;
-        bottom: toRem(9);
+        bottom: 0;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -229,7 +229,7 @@
     // .products-filter__container
 
     &__container {
-        padding-block: toRem(51);
+        padding-block-start: toRem(61);
     }
 }
 .filter-form {
@@ -330,7 +330,7 @@
     // .products__container
 
     &__container {
-        padding-block: toRem(10) toRem(30);
+        padding-block: toRem(61) toRem(30);
     }
 
     // .products__catalog

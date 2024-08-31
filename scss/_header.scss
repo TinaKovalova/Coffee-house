@@ -54,10 +54,43 @@
         @media (max-width: $tablet) {
             padding-block: toRem(5);
         }
+        .title-block__title {
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            text-transform: capitalize;
+        }
     }
 
     // .header__page-intro-title
 
     &__page-intro-title {
+    }
+
+    // header__page-intro__text
+
+    &__text {
+        text-align: center;
+        font-size: toRem(24);
+        font-weight: 700;
+
+        &--accent {
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    // header__page-intro__link
+
+    &__link {
+        min-width: toRem(120);
+        padding: toRem(8) toRem(15) toRem(10);
+        text-align: center;
+        border-radius: 3px;
+        border: toRem(1) solid #fff;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        transition: background-color 0.3s;
+        @media (any-hover) {
+            &:hover {
+                background-color: rgba(196, 196, 196, 0.5);
+            }
+        }
     }
 }
