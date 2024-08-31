@@ -62,18 +62,21 @@
     // .about__container
 
     &__container {
-        padding-block: toRem(80);
+        @include adaptiveValue("padding-block", 80, 30);
     }
 
     // .about__content
 
     &__content {
         margin: 0 auto;
-        max-width: toPercent(589, $maxWidthContainer);
+        max-width: toPercent(800, $maxWidthContainer);
         display: flex;
         flex-direction: column;
         align-items: center;
         row-gap: toRem(20);
+        @media (min-width: $tablet) {
+            max-width: toPercent(589, $maxWidthContainer);
+        }
     }
 
     // .about__title
@@ -105,7 +108,8 @@
     // .bestsellers__container
 
     &__container {
-        padding-block: toRem(80) toRem(110);
+        @include adaptiveValue("padding-block-start", 80, 50);
+        @include adaptiveValue("padding-block-end", 110, 50);
         display: flex;
         flex-direction: column;
         row-gap: toRem(39);
@@ -127,6 +131,8 @@
         gap: toRem(71);
         & > article {
             flex-basis: toRem(220);
+            flex-shrink: 1;
+            min-width: toRem(220);
         }
     }
 }
@@ -137,7 +143,8 @@
     // .beans-info__container
 
     &__container {
-        padding-block: toRem(70) toRem(59);
+        @include adaptiveValue("padding-block-start", 70, 30);
+        @include adaptiveValue("padding-block-end", 60, 30);
     }
     //beans-info__wrapper
     &__wrapper {
@@ -147,28 +154,36 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: flex-start;
-        gap: toRem(30) toVW(70, $maxWidth);
+        gap: toRem(30) toPercent(50, $maxWidthContainer);
         @media (max-width: $laptop) {
-            width: 100%;
+            // width: 100%;
         }
         @media (max-width: $tablet) {
-            column-gap: toRem(15);
+            column-gap: toRem(20);
+        }
+        &--wider {
+            width: toPercent(865, $maxWidthContainer);
+            column-gap: toPercent(50, $maxWidthContainer);
         }
     }
 
     // .beans-info__image-block
     &__image-block {
         flex: 0 1 toRem(272);
+        flex-basis: toPercent(272, 800);
         min-width: 250px;
         background-color: #c4c4c4;
         @media (max-width: $mobile) {
-            flex-basis: toRem(320);
+            // flex-basis: toRem(320);
         }
         @media (max-width: toRem(713)) {
-            aspect-ratio: 320 / 200;
+            // aspect-ratio: 320 / 200;
         }
         @media (max-width: $smallMobile) {
-            flex-grow: 1;
+            // flex-grow: 1;
+        }
+        &--wider {
+            flex-basis: toPercent(392, 865);
         }
     }
 
@@ -179,38 +194,61 @@
         height: 100%;
         aspect-ratio: 272 / 355;
         object-fit: cover;
-        // @media (max-width: $smallMobile) {
-        //     aspect-ratio: 320 / 200;
-        // }
+
+        .beans-info__image-block--wider & {
+            aspect-ratio: 392 /355;
+        }
+        @media (max-width: $mobile) {
+            // aspect-ratio: 355 / 272;
+            // object-fit: contain;
+        }
     }
 
     // .beans-info__content
 
     &__content {
-        @include adaptiveValue("flex-basis", 406, 300);
+        flex-basis: toPercent(406, 800);
         padding: toRem(9) toRem(30);
         display: flex;
         flex-direction: column;
+        row-gap: toRem(25.7);
         align-items: center;
         @media (max-width: $tablet) {
-            // flex-basis: toRem(300);
+            padding-inline: 0;
+            flex-grow: 1;
         }
 
         @media (max-width: $mobile) {
-            flex-grow: 1;
-            padding-inline: toRem(15);
         }
         @media (max-width: $smallMobile) {
-            width: 100%;
-            padding-inline: 0;
+            // width: 100%;
         }
         p {
             text-align: center;
+        }
+        p,
+        .beans-info__data {
             line-height: 1.5;
             word-spacing: 0.2rem;
         }
-        p:first-of-type {
-            padding-block: toRem(25);
+        &:has(.beans-info__data) {
+            padding-inline: 0;
+            flex-basis: toPercent(418, 865);
+        }
+    }
+
+    // beans-info__data
+    &__data {
+        display: flex;
+        flex-direction: column;
+        row-gap: toRem(16);
+        span {
+            font-weight: 700;
+        }
+    }
+    &__data-price {
+        span {
+            font-size: toRem(24);
         }
     }
     &:not(:last-child)::after {
@@ -234,17 +272,18 @@
 }
 .filter-form {
     display: flex;
-    flex-wrap: wrap;
-    gap: toRem(35) toRem(83);
+    flex-wrap: wrap-reverse;
+    gap: toRem(35) toPercent(83, $maxWidthContainer);
     justify-content: center;
     align-items: center;
 
     //filter-form__search-block
     &__search-block {
-        // flex: 0 1 toRem(284);
+        flex: 0 1 toRem(284);
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        gap: toRem(10) toRem(19);
+        gap: toRem(18) toRem(19);
     }
     //filter-form__search-lable
     &__search-lable {
@@ -267,22 +306,26 @@
     // .filter-form__countries-filter
 
     &__countries-filter {
-        // flex: 0 0 toRem(326);
+        flex-shrink: 1;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        gap: toRem(10) toRem(35);
+        gap: toRem(18) toRem(35);
     }
 
     // .filter-form__countries-list
 
     &__countries-list {
         display: flex;
-        column-gap: toRem(5);
+        flex-wrap: wrap;
+        gap: toRem(25) toRem(5);
     }
 
     // .filter-form__countries-item
 
     &__countries-item {
+        flex-shrink: 1;
+        min-width: fit-content;
         & .filter-form__country-lable {
             background: #fff;
             box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25);
@@ -341,6 +384,9 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: toRem(60) toRem(70);
+        @media (max-width: $mobile) {
+            max-width: 100%;
+        }
         .product-card {
             filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
             background-color: #ffffff;
