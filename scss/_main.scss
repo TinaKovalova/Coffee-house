@@ -1,63 +1,3 @@
-.intro {
-    // min-height: toRem(640);
-    min-height: 100svh;
-    padding-block: toRem(100);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url("../img/desk.png") center / cover no-repeat;
-    color: #ffffff;
-    // .intro__content
-
-    &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        & > *:not(:last-child) {
-            margin-bottom: toRem(20);
-        }
-        &__decor {
-            margin-bottom: toRem(35);
-        }
-    }
-
-    // .intro__title
-
-    .title-block__title {
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        text-transform: capitalize;
-    }
-
-    // .intro__text
-
-    &__text {
-        text-align: center;
-        font-size: toRem(24);
-        font-weight: 700;
-
-        &--accent {
-            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        }
-    }
-
-    // .intro__link
-
-    &__link {
-        min-width: toRem(120);
-        padding: toRem(8) toRem(15) toRem(10);
-        text-align: center;
-        border-radius: 3px;
-        border: toRem(1) solid #fff;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        transition: background-color 0.3s;
-        @media (any-hover) {
-            &:hover {
-                background-color: rgba(196, 196, 196, 0.5);
-            }
-        }
-    }
-}
-
 .about {
     // .about__container
 
@@ -104,7 +44,7 @@
 }
 
 .bestsellers {
-    background: url("../img/paper.png") center / cover no-repeat;
+    background: url("../img/paper.webp") center / cover no-repeat;
     // .bestsellers__container
 
     &__container {
@@ -114,11 +54,6 @@
         flex-direction: column;
         row-gap: toRem(39);
         align-items: center;
-    }
-
-    // .bestsellers__title
-
-    &__title {
     }
 
     // .bestsellers__collection

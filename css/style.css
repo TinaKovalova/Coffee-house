@@ -320,16 +320,15 @@ body {
   color: #ffffff;
   width: 100%;
 }
-.header--absolute {
-  position: absolute;
-  top: 0;
-  left: 0;
+.header--main-page {
+  min-height: 100svh;
+  background: url("../img/desk.webp") center/cover no-repeat;
 }
 .header--coffe-page-bg {
-  background: url("../img/page-top.png") center/cover no-repeat;
+  background: url("../img/page-top.webp") center/cover no-repeat;
 }
 .header--pleasure-page-bg {
-  background: url("../img/pleasure-top.png") center/cover no-repeat;
+  background: url("../img/pleasure-top.webp") center/cover no-repeat;
 }
 .header__container {
   display: -webkit-box;
@@ -404,8 +403,8 @@ body {
 }
 
 .intro {
-  min-height: 100svh;
-  padding-block: 6.25rem;
+  -webkit-padding-before: 10svh;
+          padding-block-start: 10svh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -415,7 +414,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url("../img/desk.png") center/cover no-repeat;
   color: #ffffff;
 }
 .intro__content {
@@ -523,7 +521,7 @@ body {
 }
 
 .bestsellers {
-  background: url("../img/paper.png") center/cover no-repeat;
+  background: url("../img/paper.webp") center/cover no-repeat;
 }
 .bestsellers__container {
   display: -webkit-box;
